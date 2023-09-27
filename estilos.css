@@ -1,0 +1,41 @@
+h1 {
+    font-size: 36px;
+    color: #ca3030;
+}
+
+body
+
+/* el body le da color a la pagina (FONDO)*/
+    {
+    background-color: #5f28a8;
+    font-size: 16px;
+}
+
+/*El encabezado pone el titulo en el medio*/
+.encabezado {
+    text-align: center;
+    /*alineacion del texto ej atras adelante o en el medio*/
+    text-transform: uppercase;
+    /*pone las letras o palabras en mayuscula o minuscula*/
+    font-weight: bold;
+    font-size: 62px;
+}
+
+/*Modifica el parrafo*/
+.parrafo {
+    text-align: justify;
+    text-transform: capitalize;
+    font-size: 62px;
+}
+
+/*Agrega un id fondo unico a la pagina*/
+#fondo {
+    background-color: #aa3b3b;
+    /* modificar el color a elección */
+}
+
+/*Agrega un enlace a un parrafo de mi pagina*/
+p a {
+    color: #02007e;
+    text-decoration: none;
+}
