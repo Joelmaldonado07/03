@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Practico 03</title>
+</head>
+
+<body>
+    <h1>Trabajo Practico 03</h1>
+    <h2>Joel Maldonado 4<sup>to</sup>3<sup>ra</sup></h2>
+    <h3>1.1- ¿Qué significa CSS?</h3>
+    <p> Es un lenguaje que sirve para describir la presentaciopn, el estilo de los elementos HTML</p>
+    <h3>1.2- ¿Para qué sirve el CSS? ¿Qué programa se utiliza para interpretar el CSS? (es para 🧠) Guía de conceptos
+    </h3>
+    <p>CSS es un lenguaje que maneja el diseño y presentación de las páginas web, es decir, <br>
+        cómo lucen cuando un usuario las visita. Funciona junto con el lenguaje HTML que se encarga del contenido básico
+        de los sitios.</p>
+    <h3>1.3- ¿A qué se llama regla de CSS? </h3>
+    <p>Una regla css se compone de uno o más selectores seguidos de una declaración que consta de una o más parejas de
+        propiedad y valor.</p>
+    <h3>1.4- ¿Cuál es la anatomía de la regla de CSS? Agregar imagen explicativa y utilizando una lista descriptiva
+        explicar sus elementos.</h3>
+    <p></p>
+    <h3>1.5- ¿Qué es un selector en CSS? </h3>
+    <p> Un selector nos permitirá aplicar estilos a elementos específicos de HTML.<br>
+        De esta forma es posible ser preciso al momento de aplicar diseño a un sitio web.</p>
+    <h3>1.6- Identificar y definir los selectores: de ID, de clases, universal, de etiquetas, descendente.</h3>
+    <p>
+        <strong>Selector de Clases:</strong>Los selectores de clases comienza siempre por un punto y las clases siempre
+        utilizadas varias veces<br>
+        y en distintas etiquetas.
+        class="primer-parrafo">Texto de un párrafo
+        .primer-parrafo {
+        font-size: 2em;
+        }
+    </p>
+    <p>
+        <strong>Selector universal:</strong>Nos permite aplicar estilos a todos los elementos HTML de un documento y se
+        indica mediante el *.
+        * {
+        color:red;
+        }
+    </p>
+    <p>
+        <strong>Selector de etiquetas:</strong>Aplicamos propiedades CSS a una etiqueta. La misma se identifica sin
+        utilizar <>. Por ejemplo.
+            p {<br>
+            color:red;<br>
+            }
+            Podemos, seleccionar varias etiquetas al mismo tiempo concatenándolas con el signo , (coma). Por
+            ejemplo:<br>
+            p,h1 {<br>
+            color:red;<br>
+            }
+    </p>
+    <p>
+        <strong>Selector descendente:</strong>Estos seectores siempre están formados por dos o más selectores separados
+        entre si. <br>
+        El último selector será el elemento HTML al que se le aplicará las propiedades de CSS.
+
+        Por ejemplo:
+
+        p span {<br>
+        color:green;<br>
+        }
+    </p>
+    <h3>1.7- Explicar brevemente utilizando una lista ordenada: ¿cómo funciona el CSS? Guía para respuesta</h3>
+    <p>
+        <strong>
+            CSS y su funcionamiento
+        </strong>
+        <strong>
+            Cuando un navegador muestra un documento, ha de combinar el contenido con la información de estilo del
+            documento. <br>
+            Procesa el documento en una serie de etapas, que enumeraremos a continuación.
+        </strong>
+    </p>
+    <ol>
+        <li>
+            1:El navegador carga el HTML (por ejemplo, lo recibe de la red).
+        </li>
+        <li>
+            2:Convierte el HTML en un DOM (Modelo de objetos del documento). El DOM representa el documento en la
+            memoria del ordenador.
+        </li>
+        <li>
+            3:Entonces, el navegador va a buscar la mayor parte de los recursos vinculados al documento HTML, como las
+            imágenes y los videos incrustados...
+        </li>
+        <li>
+            4:El navegador analiza el CSS y ordena en diferentes «cubos» las diferentes reglas según el tipo de
+            selector,<br>
+            Para cada tipo de selector que encuentre, calcula qué reglas deben aplicarse y a qué nodos en el DOM se les
+            aplica el estilo según corresponda<br>
+            (este paso intermedio se llama árbol de renderización).
+        </li>
+        <li>
+            5:El árbol de renderización presenta la estructura en que los nodos deben aparecer después de aplicarle las
+            reglas.
+        </li>
+        <li>
+            6:En la pantalla se muestra el aspecto visual de la página (esta etapa se llama pintura).
+        </li>
+    </ol>
+    </p>
+    <h3>1.8- ¿Cuáles son las tres formas para vincular CSS con HTML?</h3>
+    <p>
+        <strong>Hay tres formas para vincular el CSS con HTML</strong>
+    </p>
+    <ul>
+        <li>
+            Utilizando la etiqueta etiqueta styl:Utilizaremos la etiqueta style es decir que los CSS se aplican al
+            MISMO<br>
+            docuemnto Html.
+            Por ejemplo:
+            DOCTYPE html<br>
+            html<br>
+            head<br>
+            meta charset="utf-8"<br>
+            titleMi pagina de prueba title<br>
+            style<br>
+            p {<br>
+            color: red;<br>
+            }<br>
+            style<br>
+            head<br>
+            body<br>
+            img src="images/firefox-icon.png" alt="Mi imagen de prueba"<br>
+            body<br>
+            html
+        </li>
+        <li>
+            Utilizando el atributo style:En nuestro HTML aplicaremos estilos directamente a la etiqueta.<br>
+            Recordemos que los atributos con características de un etiqueta.
+            !DOCTYPE html>
+
+            html<br>
+
+            head<br>
+            meta charset="utf-8"<br>
+            title Mi pagina de prueba title<br>
+            head<br>
+
+            body<br>
+            p style="color:red;">Esto es un párrafo rojo<br>
+            body<br>
+
+            html
+        </li>
+        <li>
+            Utilizando un archivo externo:Esta opción es la que nos permite vincular un archivo HTML con un archivo CSS.
+            Los archivos CSS tienen extensión .css.<br>
+            Suelen llamarse estilos.css, style.css o también podés darle el nombre que prefieras para tu proyecto.
+            DOCTYPE html<br>
+            html<br>
+
+            head<br>
+            meta charset="utf-8"<br>
+            title Mi pagina de prueba title<br>
+            link href="estilos.css" rel="stylesheet"<br>
+            head<br>
+
+            body<br>
+            Esto es un párrafo<br>
+            body<br>
+
+            html<br>
+
+            La línea que nos interesa es:<br>
+
+            link href="estilos.css" rel="stylesheet"<br>
+
+        </li>
+    </ul>
+
+    <h3>1.9- Ingrese al sitio CSS Zen Garden http://www.csszengarden.com y analicemos el código HTML siguiendo los
+        siguientes pasos:
+        Hacer clic en View All Designs
+        Elegir dos diseños y abrirlo en pestañas distintas
+        En el primer diseño presiona ctrl+u (esta combinación de teclas permite ver el código HTML en el navegador)
+        En el segundo diseño presiona ctrl+u (esta combinación de teclas permite ver el código HTML en el navegador)
+        Escribir la URL de los dos diseños seleccionados y responder: las etiquetas dentro de body </h3>
+    <h3> ¿son iguales?</h3>
+    <p>Si son iguales</p>
+    <h3> ¿Qué es lo distinto? </h3>
+    <p>Lo unico distinto que tiene es el CSS, Cada css tiene propiedades distiuntas lo cual lo hace diseños unicos</p>
+    <h3> ¿Qué contribuye al cambio de diseño?</h3>
+    <p>Lo que constribuye el cambio de diseño es el CSS</p>
+    <h3>Abrir los dos archivos CSS de los diseños seleccionados. ¿Son los mismos?
+        En líneas generales, el mismo HTML </h3>
+    <P>
+        No,no son los mismo por que cada archivo tiene su propio diseño y su propia informacion.
+    </P>
+    <h3>¿puede tener diferentes diseños?</h3>
+    <p>No,no pueden tener diferentes diseños en el HTML pero apartir del CSS cambia el diseño.</p>
+
+    <H1>EJERCICIO 2</H1>
+    <h3>
+        Color Rojo Define el color del texto
+    </h3>
+    <p>
+        color: #090;
+        color: red;
+        color: hsl(30, 100%, 50%, 0.6);
+    </p>
+    <h3>
+        background-color
+        Define el color de fondo de un elemento
+    </h3>
+    <p>
+        HTML:
+        div class="exampleone"Lorem ipsum dolor sit amet, consectetuer div
+    </p>
+    <h3>font-size
+        Define el tamaño de la fuente del texto.</h3>
+    <p>
+        .exampleone {
+        background-color: teal;
+        color: white;
+        }
+    </p>
+    <h3>font-weight
+        Define el grosor de la fuente del texto (por ejemplo, si se trata de texto en negrita o normal).</h3>
+    <p>
+        p {
+        font-weight: bold;
+        }
+    </p>
+    <p>
+        div {
+        font-weight: 600;
+        }
+    </p>
+    <p>
+        span {
+        font-weight: lighter;
+        }
+    </p>
+    <h3>font-style
+        Define el estilo de la fuente del texto (por ejemplo, si es cursiva o normal).</h3>
+    <p>
+        .normal {
+        font-style: normal;
+        }
+    </p>
+
+    <p>
+        .italic {
+        font-style: italic;
+        }
+    </p>
+
+    <p>
+        .oblique {
+        font-style: oblique;
+        }
+
+    </p>
+    <h3>font-family
+        Define el tipo de letra a utilizar para el texto.</h3>
+    <p>
+        p {
+        font-family: "Times New Roman", Georgia, Serif;
+        }
+    </p>
+    <h3>text-align
+        Define la alineación horizontal del texto (izquierda, centro o derecha)</h3>
+    <p>
+        .ejemplo {
+        text-align: start;
+        border: solid;
+        }
+    </p>
+    <h3>text-decoration
+        Define la decoración del texto (por ejemplo, si está subrayado o tachado).</h3>
+    <p>
+        h1.under {
+        text-decoration: underline;
+        }
+    </p>
+    <p>
+        h1.over {
+        text-decoration: overline;
+        }
+    </p>
+    <p>
+        p.line {
+        text-decoration: line-through;
+        }
+    </p>
+    <p>
+        p.blink {
+        text-decoration: blink;
+        }
+    </p>
+    <p>
+        a.none {
+        text-decoration: none;
+        }
+    </p>
+    <p>
+        p.underover {
+        text-decoration: underline overline;
+        }
+
+    </p>
+    <h3>text-transform
+        Define la transformación del texto (por ejemplo, en mayúsculas o minúsculas).</h3>
+    <p>
+        span {
+        text-transform: none;
+        }
+    </p>
+    <p>
+        strong {
+        float: right;
+        }
+    </p>
+    <h3>letter-spacing
+        Define el espacio entre letras.</h3>
+    <p>
+        .normal {
+        letter-spacing: normal;
+        }
+    </p>
+    <p>
+        .em-wide {
+        letter-spacing: 0.4em;
+        }
+    </p>
+    <p>
+        .em-wider {
+        letter-spacing: 1em;
+        }
+    </p>
+    <p>
+        .em-tight {
+        letter-spacing: -0.05em;
+        }
+    </p>
+    <p>
+        .px-wide {
+        letter-spacing: 6px;
+        }
+    </p>
+    <h3>
+        line-height
+        Define la altura de línea del texto.</h3>
+    <p>
+        div {
+        line-height: 1.2;
+        font-size: 10pt;
+        }
+    </p>
+    <p>
+        div {
+        line-height: 1.2em;
+        font-size: 10pt;
+        }
+    </p>
+    <p> div {
+        line-height: 120%;
+        font-size: 10pt;
+        }
+    </p>
+    <p>
+        div {
+        font:
+        10pt/1.2 Georgia,
+        "Bitstream Charter",
+        serif;
+        }
+    </p>
+
+
+
+
+
+</body>
+
+</html>
